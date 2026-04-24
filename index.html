@@ -237,51 +237,6 @@
     .founder-booking-badge{ position:fixed; bottom:24px; right:24px; z-index:9999; display:flex; align-items:center; gap:8px; padding:12px 20px; background:rgba(17,17,19,0.9); color:#fff; border:1px solid var(--border); border-radius:14px; cursor:pointer; font-family:inherit; font-size:14px; font-weight:600; box-shadow:0 8px 32px rgba(0,0,0,0.4); transition:all 0.3s; text-decoration:none; backdrop-filter:blur(12px); }
     .founder-booking-badge:hover{ transform:translateY(-2px); box-shadow:0 12px 40px rgba(0,0,0,0.5); border-color:rgba(20,184,166,0.2); color:#fff; }
     .founder-booking-badge svg{ width:18px; height:18px; flex-shrink:0; }
-
-    /* AHA MOMENT MORPHING ANIMATION */
-    .aha-wrap{max-width:900px;margin:0 auto;border-radius:16px;overflow:hidden;border:1px solid var(--border);box-shadow:0 20px 60px rgba(0,0,0,0.5);background:#111113;}
-    .aha-chrome{background:#161618;padding:0.6rem 1rem;display:flex;align-items:center;gap:0.75rem;border-bottom:1px solid var(--border);}
-    .aha-dots span{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:4px;}
-    .aha-status{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:0.7rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:8px;transition:all 0.6s ease;}
-    .aha-status.pain{background:rgba(239,68,68,0.12);color:#ef4444;}
-    .aha-status.syncing{background:rgba(168,85,247,0.12);color:#a855f7;}
-    .aha-status.done{background:rgba(34,197,94,0.12);color:#22c55e;}
-    .aha-body{padding:1.5rem 1.5rem 1rem;position:relative;}
-    .aha-caption{text-align:center;padding:0.75rem 0 1rem;font-size:1.1rem;font-weight:700;transition:all 0.5s ease;min-height:2.5rem;}
-    .aha-form{display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;transition:all 0.8s ease;}
-    .aha-field{padding:0.6rem 0.75rem;border-radius:8px;font-size:0.75rem;font-family:'JetBrains Mono',monospace;transition:all 0.8s ease;position:relative;overflow:hidden;}
-    .aha-field-label{font-size:0.55rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;transition:color 0.6s ease;}
-    .aha-field-value{font-size:0.8rem;font-weight:500;transition:color 0.6s ease;}
-    .aha-field.full{grid-column:1/-1;}
-    .aha-form.state-pain .aha-field{background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.2);}
-    .aha-form.state-pain .aha-field-label{color:rgba(239,68,68,0.6);}
-    .aha-form.state-pain .aha-field-value{color:var(--text-muted);}
-    .aha-form.state-pain .aha-field.has-error{border-color:#ef4444;box-shadow:0 0 0 1px rgba(239,68,68,0.3);}
-    .aha-form.state-pain .aha-field.has-error .aha-field-value{color:#ef4444;text-decoration:line-through;}
-    .aha-form.state-syncing .aha-field{background:rgba(168,85,247,0.05);border:1px solid rgba(168,85,247,0.15);}
-    .aha-form.state-syncing .aha-field-label{color:rgba(168,85,247,0.6);}
-    .aha-form.state-syncing .aha-field-value{color:#a855f7;}
-    .aha-form.state-done .aha-field{background:rgba(34,197,94,0.05);border:1px solid rgba(34,197,94,0.18);}
-    .aha-form.state-done .aha-field-label{color:rgba(34,197,94,0.6);}
-    .aha-form.state-done .aha-field-value{color:var(--text-primary);}
-    .aha-form.state-done .aha-field.has-error{border-color:rgba(34,197,94,0.18);box-shadow:none;}
-    .aha-form.state-done .aha-field.has-error .aha-field-value{color:var(--text-primary);text-decoration:none;}
-    .aha-scan{height:2px;background:transparent;margin:0.75rem 0 0;border-radius:2px;overflow:hidden;position:relative;}
-    .aha-scan-bar{position:absolute;top:0;left:0;width:0;height:100%;border-radius:2px;transition:width 1.2s ease-in-out;}
-    .aha-timer-strip{display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-top:0.75rem;padding:0.5rem 0;font-family:'JetBrains Mono',monospace;font-size:0.75rem;transition:all 0.5s ease;min-height:2rem;}
-    @media (max-width:600px){.aha-form{grid-template-columns:1fr;}}
-    /* ── Logical Closer ── */
-    .closer-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:900px;margin:0 auto;}
-    .closer-card{border-radius:16px;padding:2rem 1.75rem;}
-    .closer-card-old{background:rgba(239,68,68,0.03);border:1px solid rgba(239,68,68,0.12);}
-    .closer-card-new{background:rgba(34,197,94,0.03);border:1px solid rgba(34,197,94,0.15);}
-    .closer-label{font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;font-family:'JetBrains Mono',monospace;margin-bottom:1.5rem;display:flex;align-items:center;gap:0.5rem;}
-    .closer-item{display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:1.15rem;}
-    .closer-item:last-child{margin-bottom:0;}
-    .closer-icon{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
-    .closer-icon-x{background:rgba(239,68,68,0.1);}
-    .closer-icon-check{background:rgba(34,197,94,0.1);}
-    @media (max-width:768px){.closer-grid{grid-template-columns:1fr;gap:1rem;}}
   </style>
 </head>
 <body>
@@ -489,157 +444,6 @@
           </div>
           <div class="stat-number" style="margin-bottom:0.4rem;"><span class="counter" data-target="1" data-suffix="">0</span></div>
           <p style="font-size:0.9rem;color:var(--text-muted);margin:0;">Click to invoice from retainer</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       AHA MOMENT - MORPHING ANIMATION
-       ═══════════════════════════════════════════ -->
-  <section style="padding:4rem 0;">
-    <div class="container">
-      <div class="aha-wrap" id="aha-container">
-        <!-- Chrome bar -->
-        <div class="aha-chrome">
-          <div class="aha-dots">
-            <span style="background:#ef4444;"></span>
-            <span style="background:#fbbf24;"></span>
-            <span style="background:#22c55e;"></span>
-          </div>
-          <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--text-muted);">23 Retainer Invoices</span>
-          <div class="aha-status" id="aha-badge" data-state="pain">MANUAL</div>
-        </div>
-        <!-- Body -->
-        <div class="aha-body">
-          <div class="aha-caption" id="aha-caption">End of month. 23 retainer invoices to build manually.</div>
-          <div class="aha-form state-pain" id="aha-form">
-            <div class="aha-field">
-              <div class="aha-field-label">Client</div>
-              <div class="aha-field-value">Checked spreadsheet — forgot to log 3 hours</div>
-            </div>
-            <div class="aha-field">
-              <div class="aha-field-label">Hours Tracked</div>
-              <div class="aha-field-value">Manual timesheets — always incomplete</div>
-            </div>
-            <div class="aha-field has-error">
-              <div class="aha-field-label">Invoice Status</div>
-              <div class="aha-field-value">Created in Word — sent 2 weeks late</div>
-            </div>
-            <div class="aha-field has-error">
-              <div class="aha-field-label">Payment</div>
-              <div class="aha-field-value">Chasing overdue invoices by email</div>
-            </div>
-            <div class="aha-field full has-error">
-              <div class="aha-field-label">Sync</div>
-              <div class="aha-field-value">Copy-paste into QuickBooks every month</div>
-            </div>
-            <div class="aha-field full has-error">
-              <div class="aha-field-label">Overview</div>
-              <div class="aha-field-value">6 hrs/month on retainer admin per client</div>
-            </div>
-          </div>
-          <div class="aha-scan" id="aha-scan">
-            <div class="aha-scan-bar" id="aha-scan-bar" style="background:transparent;"></div>
-          </div>
-          <div class="aha-timer-strip" id="aha-timer">⏱ 6 hours of admin per billing cycle</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       LOGICAL CLOSER - OLD VS NEW
-       ═══════════════════════════════════════════ -->
-  <section style="padding:4rem 0;">
-    <div class="container">
-      <div class="closer-grid">
-        <!-- Old Way -->
-        <div class="closer-card closer-card-old">
-          <div class="closer-label">
-            <span style="width:16px;height:16px;border-radius:50%;background:#ef4444;display:inline-block;"></span>
-            The Old Way
-          </div>
-          <div class="closer-item">
-            <div class="closer-icon closer-icon-x">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            </div>
-            <div style="flex:1;">
-              <p style="margin:0;font-size:0.9rem;font-weight:600;color:var(--text-primary);">Track hours in spreadsheets</p>
-              <p style="margin:0.25rem 0 0;font-size:0.8rem;color:var(--text-secondary);">that nobody updates on time</p>
-            </div>
-          </div>
-          <div class="closer-item">
-            <div class="closer-icon closer-icon-x">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            </div>
-            <div style="flex:1;">
-              <p style="margin:0;font-size:0.9rem;font-weight:600;color:var(--text-primary);">Build invoices manually</p>
-              <p style="margin:0.25rem 0 0;font-size:0.8rem;color:var(--text-secondary);">in Word or Excel every month</p>
-            </div>
-          </div>
-          <div class="closer-item">
-            <div class="closer-icon closer-icon-x">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            </div>
-            <div style="flex:1;">
-              <p style="margin:0;font-size:0.9rem;font-weight:600;color:var(--text-primary);">Chase overdue payments</p>
-              <p style="margin:0.25rem 0 0;font-size:0.8rem;color:var(--text-secondary);">with awkward follow-up emails</p>
-            </div>
-          </div>
-          <div class="closer-item">
-            <div class="closer-icon closer-icon-x">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            </div>
-            <div style="flex:1;">
-              <p style="margin:0;font-size:0.9rem;font-weight:600;color:var(--text-primary);">Copy-paste into QuickBooks</p>
-              <p style="margin:0.25rem 0 0;font-size:0.8rem;color:var(--text-secondary);">at month-end</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- New Way (RetainerFlow) -->
-        <div class="closer-card closer-card-new">
-          <div class="closer-label">
-            <span style="width:16px;height:16px;border-radius:50%;background:#22c55e;display:inline-block;"></span>
-            RetainerFlow
-          </div>
-          <div class="closer-item">
-            <div class="closer-icon closer-icon-check">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <div style="flex:1;">
-              <p style="margin:0;font-size:0.9rem;font-weight:600;color:var(--text-primary);">Hours auto-tracked</p>
-              <p style="margin:0.25rem 0 0;font-size:0.8rem;color:var(--text-secondary);">from calendar and time entries — always current</p>
-            </div>
-          </div>
-          <div class="closer-item">
-            <div class="closer-icon closer-icon-check">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <div style="flex:1;">
-              <p style="margin:0;font-size:0.9rem;font-weight:600;color:var(--text-primary);">Invoices auto-generated</p>
-              <p style="margin:0.25rem 0 0;font-size:0.8rem;color:var(--text-secondary);">with correct hours, rates, and terms</p>
-            </div>
-          </div>
-          <div class="closer-item">
-            <div class="closer-icon closer-icon-check">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <div style="flex:1;">
-              <p style="margin:0;font-size:0.9rem;font-weight:600;color:var(--text-primary);">Payment reminders sent automatically</p>
-              <p style="margin:0.25rem 0 0;font-size:0.8rem;color:var(--text-secondary);">get paid 2x faster</p>
-            </div>
-          </div>
-          <div class="closer-item">
-            <div class="closer-icon closer-icon-check">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <div style="flex:1;">
-              <p style="margin:0;font-size:0.9rem;font-weight:600;color:var(--text-primary);">Real-time sync to QuickBooks</p>
-              <p style="margin:0.25rem 0 0;font-size:0.8rem;color:var(--text-secondary);">books always up to date</p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -1141,133 +945,22 @@
       }
       return false;
     }
-
-    /* ── AHA MOMENT MORPHING ANIMATION ── */
-    document.addEventListener('DOMContentLoaded', function() {
-      var container = document.getElementById('aha-container');
-      if (!container) return;
-
-      var ahaForm = document.getElementById('aha-form');
-      var ahaBadge = document.getElementById('aha-badge');
-      var ahaCaption = document.getElementById('aha-caption');
-      var ahaTimer = document.getElementById('aha-timer');
-      var ahaScanBar = document.getElementById('aha-scan-bar');
-
-      var states = {
-        pain: {
-          badge: 'MANUAL',
-          caption: 'End of month. 23 retainer invoices to build manually.',
-          timer: '⏱ 6 hours of admin per billing cycle',
-          fields: {
-            'Client': 'Checked spreadsheet — forgot to log 3 hours',
-            'Hours Tracked': 'Manual timesheets — always incomplete',
-            'Invoice Status': 'Created in Word — sent 2 weeks late',
-            'Payment': 'Chasing overdue invoices by email',
-            'Sync': 'Copy-paste into QuickBooks every month',
-            'Overview': '6 hrs/month on retainer admin per client'
-          },
-          errors: ['Invoice Status', 'Payment', 'Sync', 'Overview'],
-          scanColor: 'rgba(239,68,68,0.3)'
-        },
-        syncing: {
-          badge: 'BILLING',
-          caption: 'RetainerFlow calculating hours and generating invoices…',
-          timer: '⟳ Calculating hours · generating invoices · syncing…',
-          fields: {
-            'Client': 'Apex Corp · Monthly retainer · 42.5 hrs logged',
-            'Hours Tracked': '42.5 / 45.0 hrs · 94% utilization · on track',
-            'Invoice Status': 'INV-2026-0389 · $8,500.00 · auto-generated',
-            'Payment': 'Paid via ACH · 3 days early · auto-reconciled',
-            'Sync': 'Synced to QuickBooks · GL coded · P&L updated',
-            'Overview': '23 clients billed · $187K invoiced · zero manual entry'
-          },
-          errors: [],
-          scanColor: 'rgba(168,85,247,0.5)'
-        },
-        done: {
-          badge: 'SENT',
-          caption: '23 invoices sent. $187K billed. Time spent: 90 seconds.',
-          timer: '✓ 23 invoices sent · all synced to QuickBooks',
-          fields: {
-            'Client': 'Apex Corp · Monthly retainer · 42.5 hrs logged',
-            'Hours Tracked': '42.5 / 45.0 hrs · 94% utilization · on track',
-            'Invoice Status': 'INV-2026-0389 · $8,500.00 · auto-generated',
-            'Payment': 'Paid via ACH · 3 days early · auto-reconciled',
-            'Sync': 'Synced to QuickBooks · GL coded · P&L updated',
-            'Overview': '23 clients billed · $187K invoiced · zero manual entry'
-          },
-          errors: [],
-          scanColor: 'rgba(34,197,94,0.4)'
-        }
-      };
-
-      var sequence = ['pain', 'syncing', 'done'];
-      var currentIndex = 0;
-      var animationRunning = false;
-
-      function transitionTo(state) {
-        var stateData = states[state];
-        animationRunning = true;
-
-        ahaForm.classList.remove('state-pain', 'state-syncing', 'state-done');
-        ahaForm.classList.add('state-' + state);
-
-        ahaBadge.textContent = stateData.badge;
-        ahaBadge.className = 'aha-status ' + state;
-
-        ahaCaption.style.opacity = '0';
-        setTimeout(function() {
-          ahaCaption.textContent = stateData.caption;
-          ahaCaption.style.transition = 'opacity 0.3s ease';
-          ahaCaption.style.opacity = '1';
-        }, 200);
-
-        ahaTimer.textContent = stateData.timer;
-
-        var fields = ahaForm.querySelectorAll('.aha-field');
-        var fieldOrder = ['Client', 'Hours Tracked', 'Invoice Status', 'Payment', 'Sync', 'Overview'];
-        fieldOrder.forEach(function(label, idx) {
-          if (fields[idx]) {
-            var value = fields[idx].querySelector('.aha-field-value');
-            value.style.opacity = '0';
-            setTimeout(function() {
-              value.textContent = stateData.fields[label];
-              value.style.transition = 'opacity 0.3s ease';
-              value.style.opacity = '1';
-            }, 100 + idx * 60);
-
-            if (stateData.errors.includes(label)) {
-              fields[idx].classList.add('has-error');
-            } else {
-              fields[idx].classList.remove('has-error');
-            }
-          }
-        });
-
-        ahaScanBar.style.background = stateData.scanColor;
-        ahaScanBar.style.width = '0%';
-        setTimeout(function() {
-          ahaScanBar.style.width = '100%';
-        }, 150);
-
-        setTimeout(function() {
-          animationRunning = false;
-        }, 1800);
-      }
-
-      function advance() {
-        if (animationRunning) return;
-        currentIndex = (currentIndex + 1) % sequence.length;
-        transitionTo(sequence[currentIndex]);
-      }
-
-      transitionTo('pain');
-      container.addEventListener('click', advance);
-
-      setInterval(function() {
-        if (!animationRunning) advance();
-      }, 4500);
-    });
   </script>
+
+<!-- DKI: Dynamic Keyword Insertion — replaces hero H1 with ?headline= param -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var params = new URLSearchParams(window.location.search);
+  var hl = params.get('headline');
+  if (hl) {
+    var h1 = document.querySelector('h1.reveal.reveal-delay-1') || document.querySelector('section h1') || document.querySelector('h1');
+    if (h1) {
+      h1.setAttribute('data-default-headline', h1.innerHTML);
+      h1.textContent = decodeURIComponent(hl.replace(/\+/g, ' '));
+    }
+  }
+});
+</script>
+
 </body>
 </html>
