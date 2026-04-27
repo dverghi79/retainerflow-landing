@@ -26,21 +26,21 @@ module.exports = async function handler(req, res) {
 
   const results = {};
 
-  // Step 1: Create contact in Resend
+  // Step 1: Create contact in Resend (with source tracking)
   try {
     const contactPayload = {
       email: email,
       first_name: firstName || undefined,
       unsubscribed: false,
     };
+    if (audienceId) {
+      contactPayload.audience_id = audienceId;
+    }
     // Pass product name as source so Resend audience shows where each contact came from
     contactPayload.properties = {
       source: productName,
       signed_up_at: new Date().toISOString(),
     };
-    if (audienceId) {
-      contactPayload.audience_id = audienceId;
-    }
 
     const contactRes = await fetch('https://api.resend.com/contacts', {
       method: 'POST',
