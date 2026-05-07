@@ -1,3 +1,9 @@
+// resend-notify.js — RetainerFlow LP
+// Required env vars: RESEND_API_KEY, RESEND_FROM_EMAIL, CONTACT_EMAIL
+// RESEND_SEGMENT_ID defaults to the RetainerFlow waitlist segment if not overridden.
+
+const PRODUCT_SEGMENT_ID = 'e49a1403-70c4-465c-9c6d-fb98fe4aa93a'; // Waitlist-RetainerFlow
+
 module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
@@ -11,7 +17,7 @@ module.exports = async function handler(req, res) {
 
   const fromEmail = process.env.RESEND_FROM_EMAIL || 'Dario - LeanAI Studio <dario@leanaistudio.com>';
   const contactEmail = process.env.CONTACT_EMAIL || 'contact@leanaistudio.com';
-  const audienceId = process.env.RESEND_AUDIENCE_ID || null;
+  const segmentId = process.env.RESEND_SEGMENT_ID || PRODUCT_SEGMENT_ID;
 
   const { email, first_name, product } = req.body || {};
   if (!email) {
@@ -26,21 +32,18 @@ module.exports = async function handler(req, res) {
 
   const results = {};
 
-  // Step 1: Create contact in Resend (with source tracking)
+  // Step 1: Create contact in Resend and assign to waitlist segment atomically
   try {
     const contactPayload = {
       email: email,
       first_name: firstName || undefined,
       unsubscribed: false,
-    };
-    if (audienceId) {
-      contactPayload.audience_id = audienceId;
-    }
-    // Pass product name as source so Resend audience shows where each contact came from
-    contactPayload.properties = {
-      source: productName,
-      product: productName,
-      signed_up_at: new Date().toISOString(),
+      properties: {
+        source: productName,
+        product: productName,
+        signed_up_at: new Date().toISOString(),
+      },
+      segments: [segmentId],
     };
 
     const contactRes = await fetch('https://api.resend.com/contacts', {
